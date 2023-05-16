@@ -1,0 +1,14 @@
+:root {
+  --background: black;
+  --textColor: white;
+}
+
+body {
+  background: var(--background);
+  color: var(--textColor);
+}
+
+h1,
+p {
+  font-family: Lato;
+}
