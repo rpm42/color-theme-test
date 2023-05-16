@@ -1,13 +1,13 @@
-import AppService from './AppService';
-import { createProviderWithInit } from './utils/provider-factory';
+import AppService from './AppService'
+import { createProviderWithInit } from './utils/provider-factory'
 
 const tuple = createProviderWithInit<AppService>((app: AppService) => {
   return () => {
-    app.init();
-  };
-});
+    app.init()
+  }
+})
 
-export const AppProvider = tuple[0];
-export const useAppContext = tuple[1];
+export const AppProvider = tuple[0]
+export const useAppContext = tuple[1]
 
-export default AppProvider;
+export default AppProvider

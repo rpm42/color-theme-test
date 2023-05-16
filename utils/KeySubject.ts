@@ -8,15 +8,18 @@ export class KeySubject<T> extends Subject<string> {
 
   next = this._input$.next
 
-  constructor(initialKey: string, public values: { [key: string]: T }) {
+  constructor(public key: string, public values: { [key: string]: T }) {
     super()
     this._keys = new Set(Object.keys(values))
-    this._input$.pipe(filter(key => this._keys.has(key))).subscribe(v => super.next(v))
+    this._input$
+      .pipe(filter(key => this._keys.has(key)))
+      .subscribe(v => super.next(v))
     this.pipe(
+      tap(key => (this.key = key)),
       map(key => this.values[key]),
       tap(v => (this.value = v))
     ).subscribe(this.value$)
-    this._input$.next(initialKey)
+    this._input$.next(key)
   }
 }
 

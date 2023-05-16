@@ -10,5 +10,13 @@ export const COLOR_THEMES = {
   dark: {
     background: 'black',
     textColor: 'white'
+  },
+  green: {
+    background: 'green',
+    textColor: 'yellow'
+  },
+  cyan: {
+    background: 'cyan',
+    textColor: 'brown'
   }
 }
