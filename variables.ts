@@ -46,6 +46,6 @@ export const FONT_THEMES = {
     bodyWeight: 400,
     boldWeight: 600,
     headerWeight: 600,
-    bodySize: 21
+    bodySize: 16
   }
 }

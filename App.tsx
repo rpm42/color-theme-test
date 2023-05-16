@@ -49,7 +49,7 @@ export default function App() {
   useCssVariableRx('bodyWeight', appService.bodyWeight$)
   useCssVariableRx('boldWeight', appService.boldWeight$)
   useCssVariableRx('headerWeight', appService.headerWeight$)
-  useCssVariableRx('bodySize', appService.bodySize$)
+  useCssVariableRx('bodySize', appService.bodySizeRel$)
   console.log(appService)
 
   function changeColorTheme() {
