@@ -5,7 +5,7 @@ export interface ColorTheme {
 
 export interface FontTheme {
   bodyFamily: string
-  headeramily: string
+  headerFamily: string
   bodyWeight: number
   boldWeight: number
   headerWeight: number
@@ -34,7 +34,7 @@ export const COLOR_THEMES = {
 export const FONT_THEMES = {
   roboto: {
     bodyFamily: 'Roboto',
-    headeramily: 'Roboto Slab',
+    headerFamily: 'Roboto Slab',
     bodyWeight: 400,
     boldWeight: 600,
     headerWeight: 600,
@@ -42,7 +42,7 @@ export const FONT_THEMES = {
   },
   noto: {
     bodyFamily: 'Noto Serif',
-    headeramily: 'Noto Sans',
+    headerFamily: 'Noto Sans',
     bodyWeight: 400,
     boldWeight: 600,
     headerWeight: 600,
