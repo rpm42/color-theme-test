@@ -35,9 +35,9 @@ export const FONT_THEMES = {
   roboto: {
     bodyFamily: 'Roboto',
     headerFamily: 'Roboto Slab',
-    bodyWeight: 400,
-    boldWeight: 600,
-    headerWeight: 600,
+    bodyWeight: 200,
+    boldWeight: 400,
+    headerWeight: 100,
     bodySize: 18
   },
   noto: {
@@ -46,6 +46,6 @@ export const FONT_THEMES = {
     bodyWeight: 400,
     boldWeight: 600,
     headerWeight: 600,
-    bodySize: 18
+    bodySize: 21
   }
 }
