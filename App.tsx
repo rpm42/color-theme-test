@@ -15,7 +15,6 @@ function setCssVariable(name: string, value: string | number) {
     `--${name}`,
     typeof value === 'number' ? value.toString() : value
   )
-  console.log('docstyle', document.documentElement.style)
 }
 
 function useCssVariableRx(
@@ -23,11 +22,9 @@ function useCssVariableRx(
   value$: ValueSubject<string | number>
 ) {
   const [value] = useObservable(value$, value$.value)
-  console.log('value', value$, value)
   useEffect(() => {
     if (!name || !value) return
     setCssVariable(name, value)
-    console.log('setCssVariable', name, value)
   }, [value])
 }
 const appService = new AppService()
@@ -50,7 +47,6 @@ export default function App() {
   useCssVariableRx('boldWeight', appService.boldWeight$)
   useCssVariableRx('headerWeight', appService.headerWeight$)
   useCssVariableRx('bodySize', appService.bodySizeRel$)
-  console.log(appService)
 
   function changeColorTheme() {
     const themes = Object.keys(appService.colorTheme$.values)

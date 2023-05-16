@@ -1,4 +1,4 @@
-import { filter, map, Subject, tap } from 'rxjs'
+import { filter, map, share, Subject, tap } from 'rxjs'
 
 export class KeySubject<T> extends Subject<string> {
   private _input$ = new Subject<string>()
@@ -17,7 +17,8 @@ export class KeySubject<T> extends Subject<string> {
     this.pipe(
       tap(key => (this.key = key)),
       map(key => this.values[key]),
-      tap(v => (this.value = v))
+      tap(v => (this.value = v)),
+      share()
     ).subscribe(this.value$)
     this._input$.next(key)
   }
