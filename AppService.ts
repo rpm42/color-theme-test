@@ -2,7 +2,7 @@ import { BehaviorSubject, Observable, pluck } from 'rxjs'
 import { COLOR_THEMES, FontTheme, FONT_THEMES } from './variables'
 import type { ColorTheme } from './variables'
 import KeySubject from './utils/KeySubject'
-import ValueSubject, { ValueObservable } from './utils/ValueSubject'
+import { ValueObservable } from './utils/ValueSubject'
 import { map } from 'rxjs/operators'
 
 export default class AppService {
@@ -37,6 +37,9 @@ export default class AppService {
     this.bodySize$.pipe(map(v => `${(v / 16) * 100}%`))
   )
 
-  constructor() {}
+  constructor() {
+    this.colorTheme$.next('green')
+    this.fontTheme$.next('noto')
+  }
   init() {}
 }

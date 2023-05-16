@@ -1,4 +1,4 @@
-import { filter, map, share, Subject, tap } from 'rxjs'
+import { filter, map, Subject, tap } from 'rxjs'
 
 export class IndexedSubject<T> extends Subject<number> {
   private _input$ = new Subject<number>()
@@ -15,8 +15,7 @@ export class IndexedSubject<T> extends Subject<number> {
     this.pipe(
       tap(v => (this.index = v)),
       map(index => this.values[index]),
-      tap(v => (this.value = v)),
-      share()
+      tap(v => (this.value = v))
     ).subscribe(this.value$)
     this._input$.next(index)
   }
