@@ -1,14 +1,38 @@
 :root {
   --background: black;
   --textColor: white;
+  --bodyFamily: 'Roboto';
+  --headerFamily: 'Roboto Slab';
+  --bodyWeight: 400;
+  --boldWeight: 600;
+  --headerWeight: 600;
+  --bodySize: 18;
+}
+
+html {
+  font-size: var(--bodySize);
+  font-weight: var(--bodyWeight);
 }
 
 body {
+  font-family: var(--bodyFamily);
   background: var(--background);
   color: var(--textColor);
 }
 
-h1,
 p {
-  font-family: Lato;
+  font-family: var(--bodyFamily);
+}
+
+strong {
+  font-weight: var(--boldWeight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headerFamily);
 }

@@ -8,6 +8,7 @@ export default class AppService {
   colorTheme$ = new KeySubject<ColorTheme>('light', COLOR_THEMES)
   background$ = new ValueSubject<string>()
   textColor$ = new ValueSubject<string>()
+  
   constructor() {
     this.colorTheme$.value$
       .pipe(map(v => v.background))

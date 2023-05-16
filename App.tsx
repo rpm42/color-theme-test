@@ -3,10 +3,11 @@ import { useEffect } from 'react'
 import './style.css'
 import { BehaviorSubject, Observable } from 'rxjs'
 import AppProvider, { useAppContext } from './AppProvider'
-import useObservable, { useSubject } from './utils/useObservable'
+import useObservable from './utils/useObservable'
 import AppService from './AppService'
 import ValueSubject from './utils/ValueSubject'
 import useBehaviorSubject from './utils/useBehaviorSubject'
+import useSubject from './utils/useSubject'
 
 function setCssVariable(name: string, value: string) {
   if (!name || !value) return
